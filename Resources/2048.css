@@ -1,0 +1,48 @@
+body {
+    background-color: #999999;
+}
+
+table {
+    border: 2px solid #222222;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #111111;
+}
+
+td {
+    background-color: #444444;
+    border: 1px solid #333333;
+    height: 100px;
+    width:  100px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/*
+ * Found stuff on keeping the game board aligned in the middle here:
+ * http://emergentweb.com/test/valign.html;
+ */
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.middle {
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}

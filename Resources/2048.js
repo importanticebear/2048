@@ -6,41 +6,14 @@ function Board() {
 }
 
 /*
- * Moves the contents from cell A to cell B. Erases the contents of cell A and
- * replaces those in cell B in the process.
- */
-Board.prototype.CellAToB = function(indexA, indexB) {
-    this.ReplaceCellContents(indexB, this.GetCellContents(indexA));
-    this.EmptyCellContents(indexA);
-}
-
-/*
  * Replaces the contents of all cells on the game board with an empty string.
  */
 Board.prototype.EmptyAllCells = function() {
-    for(gridKey in this.gridKeys) {
-        this.ReplaceCellContents(gridKey, this.emptyCell);
-    }
-}
 
-/*
- * Empties the contents of a specified cell on the game board based
- * on its zero-based index.
- */
-Board.prototype.EmptyCellContents = function(cellIndex) {
-    $(this.gridKeys[cellIndex]).empty();
 }
 
 Board.prototype.GetAllCells = function() {
     return $("div.cell");
-}
-
-/*
- * Returns the contents of a cell on the game board based on the cell's
- * zero-based index.
- */
-Board.prototype.GetCellContents = function(cellIndex) {
-    return $(this.gridKeys[cellIndex]).contents();
 }
 
 Board.prototype.GetEmptyCells = function() {
@@ -78,18 +51,6 @@ Board.prototype.RandomCell = function() {
     return this.RandomZeroToNExclusive(Math.pow(this.gridSquare, 2));
 }
 
-/*
- * Returns the index of a random <td> on the game board excluding the
- * value passed to the function.
- */
-Board.prototype.RandomCellExcluding = function(excluding) {
-    var cell = this.RandomCell();
-    while (cell === excluding) {
-        cell = this.RandomCell();
-    }
-    return cell;
-}
-
 Board.prototype.RandomSpawn = function() {
     this.GetRandomEmptyCell().innerText = this.NextNumber();
 }
@@ -110,23 +71,6 @@ Board.prototype.RandomStart = function() {
  */
 Board.prototype.RandomZeroToNExclusive = function(n) {
     return Math.floor(Math.random() * n);
-}
-
-/*
- * Replaces the contents of the game board cell identified by cellIndex with
- * the value of the contents argument.
- */
-Board.prototype.ReplaceCellContents = function(cellIndex, contents) {
-    this.EmptyCellContents(cellIndex);
-    $(this.gridKeys[cellIndex]).append(this.WrapContentsInDiv(contents));
-}
-
-Board.prototype.WrapContentsInDiv = function(contents) {
-    var div = "";
-    if (contents !== "") {
-        div = this.piece.format(contents);
-    }
-    return div;
 }
 
 /*

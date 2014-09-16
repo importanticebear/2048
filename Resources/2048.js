@@ -2,11 +2,7 @@ function Board() {
     this.emptyCell = ""; // Value to put in an empty cell
     this.gridSquare = 4; // Number of cells on a side
     this.piece = "<div id=piece>{0}</div>"
-    this.twoFourRatio = 0.8; // 80% of new tiles are 2s
-}
-
-Board.prototype.BuildBoard = function() {
-
+    this.twoFourRatio = 0.85; // 80% of new tiles are 2s
 }
 
 /*

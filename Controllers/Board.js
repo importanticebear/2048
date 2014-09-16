@@ -3,7 +3,7 @@
  * methods have been defined in the class' prototype as demonstrated here:
  * http://www.phpied.com/3-ways-to-define-a-javascript-class/
  */
-function Board() {
+function 2048.Controllers.Board() {
     this.emptyCell = ""; // Value to put in an empty cell
     this.gridSquare = 4; // Number of cells on a side
     this.piece = "<div id=piece>{0}</div>"

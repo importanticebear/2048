@@ -1,3 +1,8 @@
+/*
+ * This class represents the game board. It holds a few pieces of static data. All of its
+ * methods have been defined in the class' prototype as demonstrated here:
+ * http://www.phpied.com/3-ways-to-define-a-javascript-class/
+ */
 function Board() {
     this.emptyCell = ""; // Value to put in an empty cell
     this.gridSquare = 4; // Number of cells on a side
@@ -12,18 +17,33 @@ Board.prototype.EmptyAllCells = function() {
 
 }
 
+/*
+ * Gets all cell elements on the board. In this implementation, cells are
+ * divs with a class of "cell".
+ */
 Board.prototype.GetAllCells = function() {
     return $("div.cell");
 }
 
+/*
+ * Gets all cell elements without any contents.
+ */
 Board.prototype.GetEmptyCells = function() {
     return $("div.cell:empty");
 }
 
+/*
+ * Gets all non-empty cell elements. This will be those divs with a class
+ * of "cell" which have some text in them (a power of 2, to be exact).
+ */
 Board.prototype.GetNonEmptyCells = function() {
     return $("div.cell:not(:empty)");
 }
 
+/*
+ * Returns a single, randomly chosen empty cell from the game board. This is inteded
+ * for use in selecting a random cell to spawn a new tile in.
+ */
 Board.prototype.GetRandomEmptyCell = function() {
     var emptyCells = this.GetEmptyCells();
     var index = this.RandomZeroToNExclusive(emptyCells.size());
@@ -51,6 +71,10 @@ Board.prototype.RandomCell = function() {
     return this.RandomZeroToNExclusive(Math.pow(this.gridSquare, 2));
 }
 
+/*
+ * Selects a random empty cell and sets its contents to the next random number
+ * based on the twoFourRatio.
+ */
 Board.prototype.RandomSpawn = function() {
     this.GetRandomEmptyCell().innerText = this.NextNumber();
 }
@@ -93,6 +117,10 @@ $(document).keydown(function(event) {
     }
 });
 
+/*
+ * Ties in to the document's ready event to start driving the game.
+ * TODO - Move to a separate JS file since this doesn't really belong in the Board class.
+ */
 $(document).ready(function() {
     var board = new Board();
     board.EmptyAllCells();
@@ -102,6 +130,7 @@ $(document).ready(function() {
 /*
  * Found this method here: http://stackoverflow.com/questions/18405736/is-there-a-c-sharp-string-format-equivalent-in-javascript
  * It essentially behaves like C#'s string.Format().
+ * TODO - Move to some global method definitions file. This doesn't belong to the Board class.
  */
 if (!String.prototype.format) {
   String.prototype.format = function() {

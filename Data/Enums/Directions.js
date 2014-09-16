@@ -1,4 +1,4 @@
-2048.Data.Enums.Directions = {
+Directions = {
     UP:    "UP",
     DOWN:  "DOWN",
     LEFT:  "LEFT",

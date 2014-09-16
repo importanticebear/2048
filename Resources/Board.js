@@ -96,33 +96,3 @@ Board.prototype.RandomStart = function() {
 Board.prototype.RandomZeroToNExclusive = function(n) {
     return Math.floor(Math.random() * n);
 }
-
-/*
- * Testing keybindings
- */
-$(document).keydown(function(event) {
-    switch (event.keyCode) {
-        case 37:
-            alert('left');
-            break;
-        case 38:
-            alert('up');
-            break;
-        case 39:
-            alert('right');
-            break;
-        case 40:
-            alert('down');
-            break;
-    }
-});
-
-/*
- * Ties in to the document's ready event to start driving the game.
- * TODO - Move to a separate JS file since this doesn't really belong in the Board class.
- */
-$(document).ready(function() {
-    var board = new Board();
-    board.EmptyAllCells();
-    board.RandomStart();
-});

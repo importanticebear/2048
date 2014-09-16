@@ -1,27 +1,34 @@
 body {
-    background-color: #999999;
+    background-color: #AAAAAA;
 }
 
-table {
-    border: 2px solid #222222;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px #111111;
-}
-
-td {
-    background-color: #444444;
-    border: 1px solid #333333;
+/* Using www.colorpicker.com to generate matching color schemes. */
+.cell {
+    background-color: #494C2E;
+    border: 2px solid #333333;
     height: 100px;
-    width:  100px;
-    vertical-align: middle;
+    width: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+
+    /* text */
+    color: #4C2E3A;
+    line-height: 100px; /* if equal to height, vertical-align: middle will place text right in the middle of the div; */
+
+    font-size: 80px;
+    font-family: sans-serif;
+    font-weight: bold;
+
     text-align: center;
+    vertical-align: middle;
 }
 
 /*
  * Found stuff on keeping the game board aligned in the middle here:
  * http://emergentweb.com/test/valign.html;
  */
-.outer {
+.page {
     display: table;
     position: absolute;
     height: 100%;
@@ -32,17 +39,25 @@ td {
     margin: 0;
 }
 
-.middle {
+.table {
     padding: 0;
     display: table-cell;
     vertical-align: middle;
     margin: 0;
 }
 
-.inner {
+.board {
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: 456px;
+    height: 445px;
     margin: 0 auto;
     padding: 10px;
+    padding-right: 0px;
+
+    /* Stuff below here is my own styling */
+    border: 2px solid #222222;
+    background: #3A4C2E;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #4C2E3A;
 }

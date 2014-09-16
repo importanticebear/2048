@@ -1,0 +1,458 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Replace",
+				"ReplaceCellContents"
+			],
+			[
+				"empty",
+				"EmptyCellContents"
+			],
+			[
+				"RandomCel",
+				"RandomCellExcluding"
+			],
+			[
+				"filenam",
+				"filenameControl"
+			],
+			[
+				"scr",
+				"Screen"
+			],
+			[
+				"preproces",
+				"preprocessSingleArg"
+			],
+			[
+				"luasta",
+				"luastandalone"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "2048.html",
+			"settings":
+			{
+				"buffer_size": 1340,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Resources/2048.css",
+			"settings":
+			{
+				"buffer_size": 1252,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Resources/Board.js",
+			"settings":
+			{
+				"buffer_size": 3894,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Resources/jquery-2.1.1.js",
+			"settings":
+			{
+				"buffer_size": 247351,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 188.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/User/Plain text.sublime-settings",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Jason/Documents/GitHub/2048/Resources/2048.css",
+		"/C/Users/Jason/Documents/GitHub/2048/2048.html",
+		"/C/Users/Jason/Documents/GitHub/2048/Resources/2048.js",
+		"/C/Users/Jason/Desktop/MCP_2013(all)_1519/MCP_2013(bl)_1519.eps",
+		"/C/Users/Jason/Desktop/DM Screen.html",
+		"/C/Users/Jason/Desktop/charactersheet.php",
+		"/C/Users/Jason/Desktop/resume.php",
+		"/C/Users/Jason/Desktop/2048.html",
+		"/C/Users/Jason/Desktop/2048.js",
+		"/C/Users/Jason/Desktop/2048.css",
+		"/C/Users/Jason/Documents/Visual Studio 2013/Projects/RailSplitter/RailSplitter/WeekdayComparer.cs",
+		"/C/Users/Jason/Documents/Visual Studio 2013/Projects/RailSplitter/RailSplitter/TimeComparer.cs",
+		"/C/Users/Jason/Documents/Visual Studio 2013/Projects/RailSplitter/RailSplitter/splitter.aspx.designer.cs",
+		"/C/Users/Jason/Documents/Visual Studio 2013/Projects/RailSplitter/RailSplitter/Splitter.aspx.cs",
+		"/C/Users/Jason/Documents/Visual Studio 2013/Projects/RailSplitter/RailSplitter/Splitter.aspx",
+		"/C/Users/Jason/Documents/GitHub/Splitter/resources/actions.js",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/index.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/actions.js",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/parser.php",
+		"/C/Users/Jason/Documents/GitHub/Splitter/parser.php",
+		"/C/Users/Jason/Documents/GitHub/Splitter/index.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/splitter.php",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/Scribunto.php",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/engines/LuaStandalone/LuaStandaloneEngine.php",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/common/Common.php",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/common/Hooks.php",
+		"/C/Users/Jason/Documents/Visual Studio 2013/Projects/RailSplitter/RailSplitter/Web.config",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/common/ScribuntoContentHandler.php",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/common/ApiScribuntoConsole.php",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/Scribunto.magic.php",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/Scribunto.namespaces.php",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/modules/ext.scribunto.edit.js",
+		"/C/Users/Jason/Documents/Wiki Sandbox/mediawiki-extensions-Scribunto/modules/ext.scribunto.js",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/Base.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/Scribunto.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/index.html",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/test.html",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/ParserFunctions.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/LocalSettings.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/Expr.php",
+		"/C/Users/Jason/Desktop/mediawiki-1.23.3/cache/.htaccess",
+		"/C/Users/Jason/Desktop/informationschema.sql",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/README",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/version",
+		"/C/Users/Jason/Desktop/Scribunto/Scribunto.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/ext.scribunto.edit.css",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/Hooks.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/GlobalFunctions.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/WebStart.php",
+		"/C/Users/Jason/Desktop/Scribunto/version",
+		"/C/Users/Jason/Downloads/page.sql",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/GitInfo.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/FormOptions.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/FeedUtils.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/Fallback.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/FakeTitle.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/EditPage.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/Article.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/Action.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/AutoLoader.php",
+		"/C/Users/Jason/Desktop/fontforge-20120731-b/ltmain.sh",
+		"/C/Lua/build.cmd",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/thumb_handler.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/LocalSettings 2.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/WikiPage.php",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/php.ini",
+		"/C/xampp/apps/mediawiki/htdocs/LocalSettings.php",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/php.ini.dreamhost-example",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/pear.conf",
+		"/C/Users/Jason/Desktop/test.php",
+		"/C/Users/Jason/Documents/.SSH keys/vps admin.pub",
+		"/C/xampp/apps/caelith/LocalSettings.php",
+		"/C/xampp/apache/conf/extra/proxy-html.conf",
+		"/C/xampp/apache/conf/extra/httpd-xampp.conf",
+		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/C/xampp/apache/conf/extra/httpd-userdir.conf",
+		"/C/xampp/apache/conf/extra/httpd-proxy.conf",
+		"/C/xampp/apache/conf/extra/httpd-mpm.conf",
+		"/C/xampp/apache/conf/extra/httpd-manual.conf",
+		"/C/xampp/apache/conf/extra/httpd-info.conf",
+		"/C/xampp/apache/conf/extra/httpd-default.conf",
+		"/C/xampp/apache/conf/extra/httpd-autoindex.conf",
+		"/C/xampp/apps/mediawiki/htdocs/logs/debug.log",
+		"/C/xampp/php/php.ini",
+		"/C/xampp/apps/mediawiki/htdocs/logs/luastandalone_errors.log",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/phprc",
+		"/C/Users/Jason/AppData/Local/Temp/fz3temp-1/.htaccess"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"	",
+			"$filenameControl",
+			"private ",
+			"Scribunto_LuaInterpreter",
+			"Scribunto_LuaEngine",
+			"	",
+			"punctuation",
+			"$wgShowExceptionDetails",
+			"$wgShowE",
+			"HtmlBuilder",
+			"p",
+			"origInalArgs",
+			"origArgs",
+			"t2",
+			"t1",
+			"getTitle",
+			"Rewrite",
+			"PhpCli",
+			"wgPhpCli",
+			"wgGenerateThumbnailOnParse",
+			"wgUsePathInfo",
+			"wgArticlePath",
+			"error_reporting",
+			"ini_set",
+			"error_reporting"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"    ",
+			"FILENAME_CONTROL",
+			"",
+			"    ",
+			"originalArgs",
+			"table2",
+			"table1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "2048.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Resources/2048.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Resources/Board.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3894,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Resources/jquery-2.1.1.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 247351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "2048.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -35,6 +35,10 @@ Board.prototype.EmptyCellContents = function(cellIndex) {
     $(this.gridKeys[cellIndex]).empty();
 }
 
+Board.prototype.GetAllCells = function() {
+    return $("div.cell");
+}
+
 /*
  * Returns the contents of a cell on the game board based on the cell's
  * zero-based index.
@@ -44,7 +48,11 @@ Board.prototype.GetCellContents = function(cellIndex) {
 }
 
 Board.prototype.GetEmptyCells = function() {
-    return $("div.cell:contains('')");
+    return $("div.cell:empty");
+}
+
+Board.prototype.GetNonEmptyCells = function() {
+    return $("div.cell:not(:empty)");
 }
 
 Board.prototype.GetRandomEmptyCell = function() {

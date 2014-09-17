@@ -11,6 +11,78 @@ function Board() {
 }
 
 /*
+ * Event handler for the keypress - down.
+ * Moves all non-empty tiles as far down as they can go without letting them
+ * overlap or move off the screen. Will also merge two tiles of the same value
+ * into a single tile of twice the value.
+ */
+Board.prototype.ArrowPressDown = function() {
+    alert('down');
+    // For each row starting with the second from the bottom and moving up
+    // For each cell starting from the left and moving right (arbitrary)
+    // If the cell has contents and no lower neighbor, move it down recursively
+    // until it can't move any further.
+    // If the cell detects a lower neighbor, determine if the neighbor has the
+    // same value as the cell.
+    // If they are the same, move the cell into its neighbor's spot and double
+    // the numerical value of the cell. This is how two cells are merged into one.
+}
+
+/*
+ * Event handler for the keypress - left.
+ * Moves all non-empty tiles as far left as they can go without letting them
+ * overlap or move off the screen. Will also merge two tiles of the same value
+ * into a single tile of twice the value.
+ */
+Board.prototype.ArrowPressLeft = function() {
+    alert('left');
+    // For each column starting with the second from the left and moving right
+    // For each cell starting from the top and moving down (arbitrary)
+    // If the cell has contents and no left neighbor, move it left recursively
+    // until it can't move any further.
+    // If the cell detects a left neighbor, determine if the neighbor has the
+    // same value as the cell.
+    // If they are the same, move the cell into its neighbor's spot and double
+    // the numerical value of the cell. This is how two cells are merged into one.
+}
+
+/*
+ * Event handler for the keypress - right.
+ * Moves all non-empty tiles as far right as they can go without letting them
+ * overlap or move off the screen. Will also merge two tiles of the same value
+ * into a single tile of twice the value.
+ */
+Board.prototype.ArrowPressRight = function() {
+    alert('right');
+    // For each column starting with the second from the right and moving right
+    // For each cell starting from the top and moving down (arbitrary)
+    // If the cell has contents and no right neighbor, move it right recursively
+    // until it can't move any further.
+    // If the cell detects a right neighbor, determine if the neighbor has the
+    // same value as the cell.
+    // If they are the same, move the cell into its neighbor's spot and double
+    // the numerical value of the cell. This is how two cells are merged into one.
+}
+
+/*
+ * Event handler for the keypress - up.
+ * Moves all non-empty tiles as far up as they can go without letting them
+ * overlap or move off the screen. Will also merge two tiles of the same value
+ * into a single tile of twice the value.
+ */
+Board.prototype.ArrowPressUp = function() {
+    alert('up');
+    // For each row starting with the second from the top and moving down
+    // For each cell starting from the left and moving right (arbitrary)
+    // If the cell has contents and no upper neighbor, move it up recursively
+    // until it can't move any further.
+    // If the cell detects an upper neighbor, determine if the neighbor has the
+    // same value as the cell.
+    // If they are the same, move the cell into its neighbor's spot and double
+    // the numerical value of the cell. This is how two cells are merged into one.
+}
+
+/*
  * Replaces the contents of all cells on the game board with an empty string.
  */
 Board.prototype.EmptyAllCells = function() {

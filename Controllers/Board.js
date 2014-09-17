@@ -4,9 +4,7 @@
  * http://www.phpied.com/3-ways-to-define-a-javascript-class/
  */
 function Board() {
-    this.emptyCell = ""; // Value to put in an empty cell
     this.gridSquare = 4; // Number of cells on a side
-    this.piece = "<div id=piece>{0}</div>"
     this.twoFourRatio = 0.85; // 80% of new tiles are 2s
 }
 
@@ -106,7 +104,7 @@ Board.prototype.GetNonEmptyCells = function() {
 }
 
 /*
- * Returns a single, randomly chosen empty cell from the game board. This is inteded
+ * Returns a single, randomly chosen empty cell from the game board. This is intended
  * for use in selecting a random cell to spawn a new tile in.
  */
 Board.prototype.GetRandomEmptyCell = function() {

@@ -83,13 +83,6 @@ Board.prototype.ArrowPressUp = function() {
 }
 
 /*
- * Replaces the contents of all cells on the game board with an empty string.
- */
-Board.prototype.EmptyAllCells = function() {
-
-}
-
-/*
  * Gets all cell elements on the board. In this implementation, cells are
  * divs with a class of "cell".
  */

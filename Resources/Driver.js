@@ -13,7 +13,6 @@
      */
     $(document).ready(function() {
         board = new Board();
-        board.EmptyAllCells();
         board.RandomStart();
     });
 

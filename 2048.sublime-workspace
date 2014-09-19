@@ -36,14 +36,6 @@
 	"buffers":
 	[
 		{
-			"file": "Controllers/Board.js",
-			"settings":
-			{
-				"buffer_size": 6004,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Resources/Driver.js",
 			"settings":
 			{
@@ -52,10 +44,27 @@
 			}
 		},
 		{
-			"file": "2048.html",
+			"file": "Controllers/Board.js",
 			"settings":
 			{
-				"buffer_size": 1491,
+				"buffer_size": 7207,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Controllers/Mover.js",
+			"settings":
+			{
+				"buffer_size": 3165,
+				"line_ending": "Windows",
+				"name": "function Mover() {"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1544,
 				"line_ending": "Windows"
 			}
 		}
@@ -88,20 +97,19 @@
 	"expanded_folders":
 	[
 		"/C/Users/Jason/Documents/GitHub/2048",
-		"/C/Users/Jason/Documents/GitHub/2048/Controllers",
-		"/C/Users/Jason/Documents/GitHub/2048/Data",
-		"/C/Users/Jason/Documents/GitHub/2048/Data/Enums",
-		"/C/Users/Jason/Documents/GitHub/2048/Resources"
+		"/C/Users/Jason/Documents/GitHub/2048/data",
+		"/C/Users/Jason/Documents/GitHub/2048/data/enums"
 	],
 	"file_history":
 	[
+		"/C/Users/Jason/Documents/GitHub/2048/data/enums/Movement.js",
 		"/C/Users/Jason/Documents/GitHub/2048/Data/Enums/Directions.js",
+		"/C/Users/Jason/Documents/GitHub/2048/2048.html",
 		"/C/Users/Jason/Documents/GitHub/2048/Resources/Namespaces.js",
 		"/C/Users/Jason/Documents/GitHub/2048/Driver.js",
 		"/C/Users/Jason/Documents/GitHub/2048/Resources/Driver.js",
 		"/C/Users/Jason/Documents/GitHub/2048/Resources/Board.js",
 		"/C/Users/Jason/Documents/GitHub/2048/Resources/Common.js",
-		"/C/Users/Jason/Documents/GitHub/2048/2048.html",
 		"/C/Users/Jason/Documents/GitHub/2048/Resources/2048.css",
 		"/C/Users/Jason/Documents/GitHub/2048/Resources/jquery-2.1.1.js",
 		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/User/Plain text.sublime-settings",
@@ -200,7 +208,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 		]
@@ -210,6 +218,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			">",
+			"<",
+			">",
+			"<",
 			"id=\"3\"",
 			"id=\"2\"",
 			"id=\"1\"",
@@ -246,6 +258,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"&gt;",
+			"&lt;",
+			"&gt;",
+			"&lt;",
 			"",
 			"    ",
 			"FILENAME_CONTROL",
@@ -269,36 +285,6 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Controllers/Board.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2176,
-								2176
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "Resources/Driver.js",
 					"semi_transient": false,
 					"settings":
@@ -324,24 +310,85 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "2048.html",
+					"buffer": 1,
+					"file": "Controllers/Board.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1491,
+						"buffer_size": 7207,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								514,
-								514
+								4963,
+								4963
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Controllers/Mover.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"auto_name": "function Mover() {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								357,
+								357
 							]
 						],
 						"settings":
@@ -354,7 +401,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -398,7 +445,7 @@
 	"project": "2048.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 38.0
 	},
 	"save_all_on_build": true,
 	"select_file":

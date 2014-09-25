@@ -4,17 +4,42 @@ body {
 
 /* Using www.colorpicker.com to generate matching color schemes. */
 .cell {
+    /* size and appearance */
     background-color: #494C2E;
     border: 2px solid #333333;
     height: 100px;
     width: 100px;
+    border-radius: 5px;
+    /* end size and appearance */
+
+    /* positioning */
+    position: relative;
+    z-index: 1;
     margin-right: 10px;
     margin-bottom: 10px;
     float: left;
+    /* end positioning */
+}
+
+.tile {
+    /*background-color: orange;
+    border-color: red;*/
+
+    /* size and appearance */
+    border: 2px solid;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    /* end size and appearance */
+
+    /* positioning */
+    position: absolute; /* allows .tile elements to float over the board and .cell elements */
+    z-index: 2;
+    float: left;
+    /* end positioning */
 
     /* text */
-    color: #4C2E3A;
-    line-height: 100px; /* if equal to height, vertical-align: middle will place text right in the middle of the div; */
+    line-height: 100px;
 
     font-size: 80px;
     font-family: sans-serif;
@@ -22,6 +47,7 @@ body {
 
     text-align: center;
     vertical-align: middle;
+    /* end text */
 }
 
 /*
@@ -49,15 +75,16 @@ body {
 .board {
     margin-left: auto;
     margin-right: auto;
-    width: 456px;
-    height: 445px;
+    min-width: 454px;
+    max-width: 470px;
     margin: 0 auto;
     padding: 10px;
     padding-right: 0px;
-
-    /* Stuff below here is my own styling */
+    padding-bottom: 0px;
+    display: table;
     border: 2px solid #222222;
     background: #3A4C2E;
     border-radius: 5px;
     box-shadow: 5px 5px 5px #4C2E3A;
+    position: relative; /* allows .tile elements to float over the board and the .cell elements */
 }

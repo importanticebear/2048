@@ -13,7 +13,7 @@
      */
     $(document).ready(function() {
         board = new Board();
-        board.RandomStart();
+        Board.Start();
     });
 
     /*
@@ -23,16 +23,16 @@
     $(document).keydown(function(event) {
         switch (event.keyCode) {
             case 37:
-                board.ArrowPressLeft();
+                Board.HandleMove(Directions.LEFT);
                 break;
             case 38:
-                board.ArrowPressUp();
+                Board.HandleMove(Directions.UP);
                 break;
             case 39:
-                board.ArrowPressRight();
+                Board.HandleMove(Directions.RIGHT);
                 break;
             case 40:
-                board.ArrowPressDown();
+                Board.HandleMove(Directions.DOWN);
                 break;
         }
     });

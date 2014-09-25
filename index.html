@@ -3,10 +3,15 @@
 <head>
     <title>2048</title>
     <script src="resources/jquery-2.1.1.js"></script>
-    <script src="data/enums/Directions.js"></script>
-    <script src="data/enums/Movement.js"></script>
-    <script src="resources/Driver.js"></script>
-    <script src="controllers/Board.js"></script>
+    <script src="resources/driver.js"></script>
+    <script src="resources/Colour.src.js"></script>
+
+    <script src="data/enums/directions.js"></script>
+    <script src="data/enums/movement.js"></script>
+
+    <script src="controllers/tile.js"></script>
+    <script src="controllers/board.js"></script>
+    <script src="controllers/cell.js"></script>
 
     <link rel="stylesheet" type="text/css" href="resources/2048.css"></link>
 </head>
@@ -15,30 +20,6 @@
     <div class="page">
         <div class="table">
             <div class="board">
-                <div class="row">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-                <div class="row">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-                <div class="row">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-                <div class="row">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
             </div>
         </div>
     </div>

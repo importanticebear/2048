@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"Generate",
+				"GenerateBackgroundColor"
+			],
+			[
+				"positi",
+				"Position"
+			],
+			[
+				"posit",
+				"Position"
+			],
+			[
+				"po",
+				"Position"
+			],
+			[
+				"Ge",
+				"GetNextPosInDirection"
+			],
+			[
+				"Gri",
+				"GRID_SQUARE"
+			],
+			[
+				"Gr",
+				"GRID_SQUARE"
+			],
+			[
+				"gr",
+				"GRID_SQUARE"
+			],
+			[
 				"right",
 				"RIGHT"
 			],
@@ -40,35 +72,35 @@
 	"buffers":
 	[
 		{
-			"file": "Resources/Driver.js",
-			"settings":
-			{
-				"buffer_size": 1114,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Controllers/Board.js",
-			"settings":
-			{
-				"buffer_size": 7674,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Controllers/Mover.js",
-			"settings":
-			{
-				"buffer_size": 3156,
-				"line_ending": "Windows",
-				"name": "function Mover() {"
-			}
-		},
-		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1544,
+				"buffer_size": 746,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/tile.js",
+			"settings":
+			{
+				"buffer_size": 6778,
+				"line_ending": "Windows",
+				"name": "function Tile() {"
+			}
+		},
+		{
+			"file": "controllers/board.js",
+			"settings":
+			{
+				"buffer_size": 3891,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/driver.js",
+			"settings":
+			{
+				"buffer_size": 1152,
 				"line_ending": "Windows"
 			}
 		}
@@ -101,11 +133,19 @@
 	"expanded_folders":
 	[
 		"/C/Users/Jason/Documents/GitHub/2048",
+		"/C/Users/Jason/Documents/GitHub/2048/controllers",
 		"/C/Users/Jason/Documents/GitHub/2048/data",
-		"/C/Users/Jason/Documents/GitHub/2048/data/enums"
+		"/C/Users/Jason/Documents/GitHub/2048/data/enums",
+		"/C/Users/Jason/Documents/GitHub/2048/resources"
 	],
 	"file_history":
 	[
+		"/C/Users/Jason/Documents/GitHub/Front/resources/deck.js",
+		"/C/Users/Jason/Documents/GitHub/2048/resources/Colour.src.js",
+		"/C/Users/Jason/Documents/GitHub/2048/resources/2048.css",
+		"/C/Users/Jason/Documents/GitHub/2048/resources/driver.js",
+		"/C/Users/Jason/Documents/GitHub/2048/controllers/cell.js",
+		"/C/Users/Jason/Documents/GitHub/2048/controllers/mover.js",
 		"/C/Users/Jason/Documents/GitHub/2048/data/enums/Movement.js",
 		"/C/Users/Jason/Documents/GitHub/2048/Data/Enums/Directions.js",
 		"/C/Users/Jason/Documents/GitHub/2048/2048.html",
@@ -222,6 +262,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"CanMove",
+			"454px",
+			"num",
+			"tileColor",
+			"pos",
+			"number",
+			"hasMerged",
 			">",
 			"<",
 			">",
@@ -262,6 +309,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"position",
+			"TileColor",
+			"Position",
+			"Number",
+			"HasMerged",
 			"&gt;",
 			"&lt;",
 			"&gt;",
@@ -278,7 +330,7 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
@@ -289,19 +341,110 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Resources/Driver.js",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1114,
+						"buffer_size": 746,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1044,
-								1044
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "controllers/tile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								903,
+								914
+							]
+						],
+						"settings":
+						{
+							"auto_name": "function Tile() {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1485.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "controllers/board.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3891,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								797,
+								797
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/driver.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								786,
+								786
 							]
 						],
 						"settings":
@@ -316,104 +459,18 @@
 					},
 					"stack_index": 2,
 					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Controllers/Board.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7674,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4596,
-								4596
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 468.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Controllers/Mover.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3156,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3147,
-								3147
-							]
-						],
-						"settings":
-						{
-							"auto_name": "function Mover() {",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1544,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								357,
-								357
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 21.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -428,11 +485,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.915835777126,
 			1.0
 		],
 		"rows":
@@ -449,7 +513,7 @@
 	"project": "2048.sublime-project",
 	"replace":
 	{
-		"height": 38.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -4,151 +4,118 @@
  * http://www.phpied.com/3-ways-to-define-a-javascript-class/
  */
 function Board() {
-    this.gridSquare = 4; // Number of cells on a side
-    this.twoFourRatio = 0.85; // 80% of new tiles are 2s
+/**************** Data Members ****************/
+Board.GRID_SQUARE = 4; // Number of cells on a side
+
+Board.Cells = Board.CreateCells();
+Board.TileBuffer = [];
+Board.Tiles = [];
+/**************** End Data Members ****************/
 }
 
+/**************** Event Handlers ****************/
+Board.HandleMove = function(direction) {
+    for (i = 0; i < Board.Tiles.length; i++) {
+        if (Board.Tiles[i]) {
+            Board.Tiles[i].Move(direction, Board.UpdateTiles);
+        }
+    }
+    Board.Tiles = Board.TileBuffer;
+    Board.TileBuffer = [];
+}
+/**************** End Event Handlers ****************/
+
+Board.UpdateTiles = function(oldPos, newPos) {
+    Board.TileBuffer[newPos] = Board.Tiles[oldPos];
+}
+
+/**************** Static Methods ****************/
 /*
- * Event handler for the keypress - down.
- * Moves all non-empty tiles as far down as they can go without letting them
- * overlap or move off the screen. Will also merge two tiles of the same value
- * into a single tile of twice the value.
+ * Creates the empty cells on the game board. These are static elements meant to
+ * indicate where the playable spots on the board are. They don't move or do
+ * anything special.
  */
-Board.prototype.ArrowPressDown = function() {
-    alert('down');
-    // For each row starting with the second from the bottom and moving up
-    // For each cell starting from the left and moving right (arbitrary)
-    // If the cell has contents and no lower neighbor, move it down recursively
-    // until it can't move any further.
-    // If the cell detects a lower neighbor, determine if the neighbor has the
-    // same value as the cell.
-    // If they are the same, move the cell into its neighbor's spot and double
-    // the numerical value of the cell. This is how two cells are merged into one.
+Board.CreateCells = function() {
+    var cells = [];
+    for (i = 0; i < Math.pow(Board.GRID_SQUARE, 2); i++) {
+        cells[i] = new Cell(i);
+        $(".board").append(cells[i]);
+    }
+    return cells;
 }
 
-/*
- * Event handler for the keypress - left.
- * Moves all non-empty tiles as far left as they can go without letting them
- * overlap or move off the screen. Will also merge two tiles of the same value
- * into a single tile of twice the value.
- */
-Board.prototype.ArrowPressLeft = function() {
-    alert('left');
-    // For each column starting with the second from the left and moving right
-    // For each cell starting from the top and moving down (arbitrary)
-    // If the cell has contents and no left neighbor, move it left recursively
-    // until it can't move any further.
-    // If the cell detects a left neighbor, determine if the neighbor has the
-    // same value as the cell.
-    // If they are the same, move the cell into its neighbor's spot and double
-    // the numerical value of the cell. This is how two cells are merged into one.
+Board.GetLeft = function(pos) {
+    return Board.GetOffset(Board.GetX(pos));
 }
 
-/*
- * Event handler for the keypress - right.
- * Moves all non-empty tiles as far right as they can go without letting them
- * overlap or move off the screen. Will also merge two tiles of the same value
- * into a single tile of twice the value.
- */
-Board.prototype.ArrowPressRight = function() {
-    alert('right');
-    // For each column starting with the second from the right and moving right
-    // For each cell starting from the top and moving down (arbitrary)
-    // If the cell has contents and no right neighbor, move it right recursively
-    // until it can't move any further.
-    // If the cell detects a right neighbor, determine if the neighbor has the
-    // same value as the cell.
-    // If they are the same, move the cell into its neighbor's spot and double
-    // the numerical value of the cell. This is how two cells are merged into one.
+Board.GetOffset = function(coord) {
+    var offset;
+    switch (coord) {
+        case 0:
+            offset = 10;
+            break;
+        case 1:
+            offset = 124;
+            break;
+        case 2:
+            offset = 237;
+            break;
+        case 3:
+            offset = 350;
+            break;
+    }
+    return offset;
 }
 
-/*
- * Event handler for the keypress - up.
- * Moves all non-empty tiles as far up as they can go without letting them
- * overlap or move off the screen. Will also merge two tiles of the same value
- * into a single tile of twice the value.
- */
-Board.prototype.ArrowPressUp = function() {
-    alert('up');
-    // For each row starting with the second from the top and moving down
-    // For each cell starting from the left and moving right (arbitrary)
-    // If the cell has contents and no upper neighbor, move it up recursively
-    // until it can't move any further.
-    // If the cell detects an upper neighbor, determine if the neighbor has the
-    // same value as the cell.
-    // If they are the same, move the cell into its neighbor's spot and double
-    // the numerical value of the cell. This is how two cells are merged into one.
+Board.GetTop = function(pos) {
+    return Board.GetOffset(Board.GetY(pos));
 }
 
-/*
- * Gets all cell elements on the board. In this implementation, cells are
- * divs with a class of "cell".
- */
-Board.prototype.GetAllCells = function() {
-    return $("div.cell");
+Board.GetValueAtPosition = function(pos) {
+    return Board.Tiles[pos] ? Board.Tiles[pos].Number : "";
 }
 
+Board.GetX = function(pos) {
+    return pos % Board.GRID_SQUARE;
+}
+
+Board.GetY = function(pos) {
+    return Math.floor(pos / Board.GRID_SQUARE);
+}
+/**************** End Static Methods ****************/
+
+/**************** Instance Methods ****************/
 /*
  * Gets all cell elements without any contents.
  */
-Board.prototype.GetEmptyCells = function() {
-    return $("div.cell:empty");
-}
-
-/*
- * Gets all non-empty cell elements. This will be those divs with a class
- * of "cell" which have some text in them (a power of 2, to be exact).
- */
-Board.prototype.GetNonEmptyCells = function() {
-    return $("div.cell:not(:empty)");
+Board.GetEmptyCells = function() {
+    var indices = [];
+    var indicesPtr = 0;
+    for (i = 0; i < Math.pow(Board.GRID_SQUARE, 2); i++) {
+        if (!Board.Tiles[i]) {
+            indices[indicesPtr++] = i;
+        }
+    }
+    return indices;
 }
 
 /*
  * Returns a single, randomly chosen empty cell from the game board. This is intended
  * for use in selecting a random cell to spawn a new tile in.
  */
-Board.prototype.GetRandomEmptyCell = function() {
-    var emptyCells = this.GetEmptyCells();
-    var index = this.RandomZeroToNExclusive(emptyCells.size());
+Board.GetRandomEmptyCell = function() {
+    var emptyCells = Board.GetEmptyCells();
+    var index = Board.RandomZeroToNExclusive(emptyCells.length);
     return emptyCells[index];
-}
-
-/*
- * Randomly selects the next number to spawn based on the twoFourRatio.
- */
-Board.prototype.NextNumber = function() {
-    var next;
-    if (Math.random() <= this.twoFourRatio){
-        next = 2;
-    } else {
-        next = 4;
-    }
-    return next;
-}
-
-/*
- * Returns the index of a random <td> on the game board. Use this as
- * the index for grid to choose a random cell.
- */
-Board.prototype.RandomCell = function() {
-    return this.RandomZeroToNExclusive(Math.pow(this.gridSquare, 2));
 }
 
 /*
  * Selects a random empty cell and sets its contents to the next random number
  * based on the twoFourRatio.
  */
-Board.prototype.RandomSpawn = function() {
-    this.GetRandomEmptyCell().innerText = this.NextNumber();
-}
-
-/*
- * Randomly selects two cells on the game board and spawns either a 2 or 4
- * in them based on the twoFourRatio.
- */
-Board.prototype.RandomStart = function() {
-    this.RandomSpawn();
-    this.RandomSpawn();
+Board.RandomSpawn = function() {
+    var index = Board.GetRandomEmptyCell();
+    Board.Tiles[index] = new Tile(index); // The new tile will add itself to the DOM
 }
 
 /*
@@ -156,6 +123,16 @@ Board.prototype.RandomStart = function() {
  * will select from each whole number starting at and including 0 and going
  * up to and including 15.
  */
-Board.prototype.RandomZeroToNExclusive = function(n) {
+Board.RandomZeroToNExclusive = function(n) {
     return Math.floor(Math.random() * n);
 }
+
+/*
+ * Randomly selects two cells on the game board and spawns either a 2 or 4
+ * in them based on the twoFourRatio.
+ */
+Board.Start = function() {
+    Board.RandomSpawn();
+    Board.RandomSpawn();
+}
+/**************** End Instance Methods ****************/

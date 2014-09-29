@@ -12,8 +12,7 @@ function Tile(position) {
     $(".board").append(this.Markup);
     this.$me = $("#" + position + ".tile"); // Alias for this tile in the DOM
 
-    this.$me.css("border", "2px solid")
-            .css("left", Board.GetLeft(position) + "px")
+    this.$me.css("left", Board.GetLeft(position) + "px")
             .css("top", Board.GetTop(position) + "px")
             .text(this.Number);
 

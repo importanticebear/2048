@@ -1,53 +1,6 @@
 body {
     background-color: #AAAAAA;
-}
-
-/* Using www.colorpicker.com to generate matching color schemes. */
-.cell {
-    /* size and appearance */
-    background-color: #494C2E;
-    border: 2px solid #333333;
-    height: 100px;
-    width: 100px;
-    border-radius: 5px;
-    /* end size and appearance */
-
-    /* positioning */
-    position: relative;
-    z-index: 1;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    float: left;
-    /* end positioning */
-}
-
-.tile {
-    /*background-color: orange;
-    border-color: red;*/
-
-    /* size and appearance */
-    border: 2px solid;
-    height: 100px;
-    width: 100px;
-    border-radius: 5px;
-    /* end size and appearance */
-
-    /* positioning */
-    position: absolute; /* allows .tile elements to float over the board and .cell elements */
-    z-index: 2;
-    float: left;
-    /* end positioning */
-
-    /* text */
-    line-height: 100px;
-
-    font-size: 80px;
-    font-family: sans-serif;
-    font-weight: bold;
-
-    text-align: center;
-    vertical-align: middle;
-    /* end text */
+    font-family: "Lucida Console", "Monaco", "Consolas", monospace;
 }
 
 /*
@@ -70,21 +23,96 @@ body {
     display: table-cell;
     vertical-align: middle;
     margin: 0;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 6em;
+    text-shadow: 2px 1px hsl(100, 50%, 80%);
+    letter-spacing: 0.17em;
+}
+
+.cell {
+    /* appearance */
+    background-color: rgba(39, 49, 52, 0.81);
+    border: 2px solid rgba(0, 15, 20, 0.89);
+    border-radius: 5px;
+    /* end appearance */
+
+    /* positioning */
+    position: relative;
+    z-index: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 96px;
+    max-width: 96px;
+    height: 96px;
+    max-height: 96px;
+    float: left;
+    /* end positioning */
+}
+
+.cell .spacer {
+    visibility: hidden;
+}
+
+.tile {
+    /* appearance */
+    border: 2px solid;
+    border-radius: 5px;
+    /* end appearance */
+
+    /* positioning */
+    width: 96px;
+    max-width: 96px;
+    height: 96px;
+    max-height:96px;
+    position: absolute; /* allows .tile elements to float over the board and .cell elements */
+    z-index: 2;
+    float: left;
+    /* end positioning */
+
+    /* text */
+    line-height: 96px;
+    font-size: inherit;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 0em;
+    text-shadow: none;
+    /* end text */
+}
+
+.foot {
+    padding-top: 0.75em;
+    font-weight: normal;
+    font-size: 0.15em;
+    text-shadow: none;
+    letter-spacing: 0.1em;
+}
+
+.board .cell:nth-child(4n + 4) {
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 .board {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 454px;
-    max-width: 470px;
-    margin: 0 auto;
-    padding: 10px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    display: table;
-    border: 2px solid #222222;
-    background: #3A4C2E;
+    /* Coloring */
+    border: 2px solid rgba(0, 33, 46, 0.89);
+    background: rgba(13, 60, 78, 0.23);
     border-radius: 5px;
-    box-shadow: 5px 5px 5px #4C2E3A;
+    box-shadow: 5px 5px 5px rgba(0, 11, 15, 0.55);
+    /* End Coloring */
+
+    /* Size and Position */
+    min-width: 438px;
+    max-width: 438px;
+    min-height: 438px;
+    max-height: 438px;
+    margin-left: auto; /* Keeps the board horizontally centered in conjunction with margin-right */
+    margin-right: auto; /* Keeps the board horizontally centered in conjunction with margin-left */
     position: relative; /* allows .tile elements to float over the board and the .cell elements */
+    padding-left: 10px; /* 1.8% here somehow makes the absolute value of padding equal to the margin on cell elements */
+    padding-top: 10px; /* 1.8% here somehow makes the absolute value of padding equal to the margin on cell elements */
+    /* End Size and Position */
 }
+

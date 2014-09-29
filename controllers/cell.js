@@ -1,8 +1,8 @@
 function Cell(position) {
     return $("<div/>", {
         class: "cell",
-        id: position,
-        left: Board.GetLeft(position),
-        top: Board.GetTop(position)
-    });
+        id: position
+    }).append($("<div/>", {
+        class: "spacer"
+    }).text("0"));
 }

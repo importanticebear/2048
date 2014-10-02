@@ -78,6 +78,14 @@
 				"buffer_size": 2774,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "controllers/cell.js",
+			"settings":
+			{
+				"buffer_size": 168,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -319,7 +327,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -335,8 +343,8 @@
 						"selection":
 						[
 							[
-								1648,
-								1648
+								1453,
+								1453
 							]
 						],
 						"settings":
@@ -346,7 +354,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "controllers/cell.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

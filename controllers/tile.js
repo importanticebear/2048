@@ -1,15 +1,20 @@
+/*
+ * Represents a playable tile on the board. It needs to know
+ * its position on the board to initialize correctly.
+ */
 function Tile(position) {
     this.HasMerged = false; // Tiles can merge only one time per arrow click
     this.Number = Math.random() <= Tile.TWO_FOUR_RATIO ? 2 : 4; // Initialize the tile's value randomly
     this.Position = position; // Position is determined by the board
-    this.Salt = Math.floor(Math.random() * position);
 
     this.Markup = $("<div/>", {
         class: "tile",
         id: position
     });
 
-    $(".board").append(this.Markup);
+    $(".board").append(this.Markup); // Have to add the tile to the board
+
+    // TODO This may need to be updated every time the tile moves
     this.$me = $("#" + position + ".tile"); // Alias for this tile in the DOM
 
     this.$me.css("left", Board.GetLeft(position) + "px")
@@ -23,7 +28,24 @@ function Tile(position) {
 }
 
 /**************** Instance Methods ****************/
+/*
+ * Moves the tile in direction indicated by the
+ * provided argument.
+ *
+ * TODO: Add validation to ensure that the 'direction'
+ * argument is equal to one of the constants in the
+ * directions enum.
+ */
 Tile.prototype.AnimateMove = function(direction) {
+    /*
+     * TODO
+     * This only moves the tile one space in the given direction.
+     * There needs to be a method which gets the destination
+     * position of the tile and animates its move to it. Such
+     * a method would have to determine if the tile is going
+     * to merge with another at its destination or if it's going
+     * to be moving to an open spot.
+     */
     var nextPos = this.GetNextPosInDirection(direction);
     this.$me.animate({
         top: Board.GetTop(nextPos) + "px",
@@ -52,19 +74,34 @@ Tile.prototype.CanMove = function(direction) {
     return canMove;
 }
 
+/*
+ * Sets this tile's background color.
+ *
+ * This method can be expanded to selectively generate colors randomly
+ * or change the color to a static value based on the tile's number.
+ */
 Tile.prototype.GenerateBackgroundColor = function() {
     this.$me.css("background-color", "#090909");
-    //this.$me.css("background-color", new HSVColour(this.HSV1(360), this.HSV2(100), this.HSV3(100)).getCSSHexadecimalRGB());
 }
 
+/*
+ * Sets this tile's border color.
+ *
+ * This method can be expanded to selectively generate colors randomly
+ * or change the color to a static value based on the tile's number.
+ */
 Tile.prototype.GenerateBorderColor = function() {
     this.$me.css("border-color", "#D5D5D5");
-    //this.$me.css("border-color", new HSVColour(this.HSV3(360), this.HSV2(100), this.HSV1(100)).getCSSHexadecimalRGB());
 }
 
+/*
+ * Sets this tile's text color.
+ *
+ * This method can be expanded to selectively generate colors randomly
+ * or change the color to a static value based on the tile's number.
+ */
 Tile.prototype.GenerateTextColor = function() {
     this.$me.css("color", "#4E7A5A")
-    //this.$me.css("color", new HSVColour(this.HSV2(360), this.HSV1(100), this.HSV3(100)).getCSSHexadecimalRGB());
 }
 
 /*
@@ -89,18 +126,6 @@ Tile.prototype.GetNextPosInDirection = function(direction) {
             break;
     }
     return next;
-}
-
-Tile.prototype.HSV1 = function(max) {
-    return this.Position * this.Salt % max;
-}
-
-Tile.prototype.HSV2 = function(max) {
-    return Board.GetLeft(this.Position) * this.Salt % max;
-}
-
-Tile.prototype.HSV3 = function(max) {
-    return Board.GetTop(this.Position) * this.Salt % max;
 }
 
 /*
@@ -136,6 +161,7 @@ Tile.prototype.IsNextPosLegal = function(direction) {
  * can merge only if they have the same this.Number
  */
 Tile.prototype.Merge = function(direction) {
+    // TODO: implement this based on the comments below
     // I am going to merge into the cell at direction
     // Set my z-index higher than the tile in direction (so I appear on top of it)
     // Move onto the other tile's spot
@@ -147,7 +173,10 @@ Tile.prototype.Merge = function(direction) {
 
 /*
  * Moves the tile in the given direction. The direction argument should come from
- * the Direction.js enum.
+ * the Directions.js enum.
+ *
+ * TODO: Add validations to determine that direction actually comes from the
+ * Directions.js enum
  */
 Tile.prototype.Move = function(direction, callback) {
     switch (this.CanMove(direction)) {
@@ -157,7 +186,6 @@ Tile.prototype.Move = function(direction, callback) {
             var old = this.Position;
             this.Position = this.GetNextPosInDirection(direction);
             callback(old, this.Position);
-            //this.Move(direction); // Try to move again
             break;
         case Tile.MERGE:
             if (!this.HasMerged) {
@@ -167,7 +195,6 @@ Tile.prototype.Move = function(direction, callback) {
                 this.Merge(Board.GetCellAtPosition(next));
                 this.Position = next;
                 callback(old, this.Position);
-                //this.Move(direction);
             }
             break;
     }

@@ -64,26 +64,7 @@ Board.GetLeft = function(pos) {
  * function needs to know about the column position or row position.
  */
 Board.GetOffset = function(coord) {
-    /* 
-     * FIXME
-     * This method is really broken since my changes to how cells are spawned.
-     */
-    var offset;
-    switch (coord) {
-        case 0:
-            offset = 10;
-            break;
-        case 1:
-            offset = 124;
-            break;
-        case 2:
-            offset = 237;
-            break;
-        case 3:
-            offset = 350;
-            break;
-    }
-    return offset;
+    return 10 * (coord + 1) + 100 * coord;
 }
 
 /*
@@ -120,7 +101,7 @@ Board.GetY = function(pos) {
  * Gets all cell elements without any contents.
  */
 Board.GetEmptyCells = function() {
-    /* 
+    /*
      * FIXME
      * First, this is inappropriately named since "cells"
      * are the background elements on the board on which tiles

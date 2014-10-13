@@ -1,42 +1,42 @@
-/*
- * This class represents the game board. It holds a few pieces of static data. All of its
- * methods have been defined in the class' prototype as demonstrated here:
- * http://www.phpied.com/3-ways-to-define-a-javascript-class/
- */
 function Board() {
 /**************** Data Members ****************/
 Board.GRID_SQUARE = 4; // Number of cells on a side
 
 Board.Cells = Board.CreateCells();
-Board.TileBuffer = [];
 Board.Tiles = [];
 /**************** End Data Members ****************/
 }
 
-/**************** Event Handlers ****************/
 /*
  * Performs the moves for all tiles on the board.
  */
 Board.HandleMove = function(direction) {
     for (i = 0; i < Board.Tiles.length; i++) {
         if (Board.Tiles[i]) {
-            Board.Tiles[i].Move(direction, Board.UpdateTiles);
+            var neighborIndex = Board.FindNextNeighborIndex(direction, i);
+            var canMerge = neighborIndex != -1 && Board.CanMerge(Board.Tiles[i], Board.Tiles[neighborIndex]);
+            var destination = canMerge ? neighborIndex : Board.FindNextOpenCell(direction, i);
+            var left = Board.GetLeft(destination);
+            var top = Board.GetTop(destination);
+
+            if (canMerge) {
+                Board.Tiles[i].Merge(left, top, destination);
+            } else {
+                Board.Tiles[i].Move(left, top, destination);
+            }
+
+            Board.Tiles[destination] = Board.Tiles[i];
+            Board.Tiles[i] = null;
         }
     }
-    Board.Tiles = Board.TileBuffer;
-    Board.TileBuffer = [];
-}
-/**************** End Event Handlers ****************/
 
-/*
- * Once all tiles have been moved, this will push the changes
- * to the collection of tiles to the main Tile array.
- */
-Board.UpdateTiles = function(oldPos, newPos) {
-    Board.TileBuffer[newPos] = Board.Tiles[oldPos];
+    Board.RandomSpawn();
 }
 
-/**************** Static Methods ****************/
+Board.CanMerge = function(tile, neighbor) {
+    return tile.Number == neighbor.Number && !tile.HasMerged && !neighbor.HasMerged;
+}
+
 /*
  * Creates the empty cells on the game board. These are static elements meant to
  * indicate where the playable spots on the board are. They don't move or do
@@ -49,6 +49,72 @@ Board.CreateCells = function() {
         $(".board").append(cells[i]);
     }
     return cells;
+}
+
+/*
+ * Locates the nearest neighbor to a tile at startingPos based on a direction.
+ */
+Board.FindNextNeighborIndex = function(direction, startingPos) {
+    var rowPos = Board.GetY(startingPos);
+    var currentPos = startingPos;
+    var neighbor = -1;
+    switch (direction) {
+        case Directions.UP:
+            while (rowPos > 0) {
+                var nextPos = currentPos - Board.GRID_SQUARE;
+                rowPos = Board.GetY(currentPos);
+                if (Board.Tiles[nextPos]) {
+                    neighbor = nextPos;
+                    break;
+                } else {
+                    currentPos = nextPos;
+                }
+            }
+        case Directions.DOWN:
+        case Directions.LEFT:
+        case Directions.RIGHT:
+    }
+    return neighbor;
+}
+
+/*
+ * Locates the destination for a tile based on its direction and starting position.
+ */
+Board.FindNextOpenCell = function(direction, startingPos) {
+    var rowPos = Board.GetY(startingPos);
+    var colPos = Board.GetX(startingPos);
+    var currentPos = startingPos;
+
+    switch (direction) {
+        case Directions.UP:
+            while (rowPos > 0) { // Else already in top row
+                var nextPos = currentPos - Board.GRID_SQUARE;
+                if (!Board.Tiles[nextPos]) {
+                    currentPos = nextPos;
+                    rowPos = Board.GetY(currentPos);
+                } else {
+                    break;
+                }
+            }
+            break;
+        case Directions.DOWN:
+            while (rowPos < Board.GRID_SQUARE - 1) { // Else already in bottom row
+
+            }
+            break;
+        case Directions.LEFT:
+            while (colPos > 0) { // Else already in left column
+
+            }
+            break;
+        case Directions.RIGHT:
+            while (colPos < Board.GRID_SQUARE - 1) { // Else already in right column
+
+            }
+            break;
+    }
+
+    return currentPos;
 }
 
 /*
@@ -94,9 +160,7 @@ Board.GetX = function(pos) {
 Board.GetY = function(pos) {
     return Math.floor(pos / Board.GRID_SQUARE);
 }
-/**************** End Static Methods ****************/
 
-/**************** Instance Methods ****************/
 /*
  * Gets all cell elements without any contents.
  */
@@ -166,4 +230,3 @@ Board.Start = function() {
     Board.RandomSpawn();
     Board.RandomSpawn();
 }
-/**************** End Instance Methods ****************/

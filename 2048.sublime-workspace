@@ -72,18 +72,18 @@
 	"buffers":
 	[
 		{
-			"file": "resources/2048.css",
+			"file": "controllers/board.js",
 			"settings":
 			{
-				"buffer_size": 2774,
+				"buffer_size": 5821,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "controllers/cell.js",
+			"file": "controllers/tile.js",
 			"settings":
 			{
-				"buffer_size": 168,
+				"buffer_size": 7466,
 				"line_ending": "Windows"
 			}
 		}
@@ -124,11 +124,11 @@
 	"file_history":
 	[
 		"/C/Users/Jason/Documents/GitHub/2048/resources/driver.js",
-		"/C/Users/Jason/Documents/GitHub/2048/controllers/tile.js",
+		"/C/Users/Jason/Documents/GitHub/2048/resources/2048.css",
 		"/C/Users/Jason/Documents/GitHub/2048/controllers/cell.js",
+		"/C/Users/Jason/Documents/GitHub/2048/controllers/tile.js",
 		"/C/Users/Jason/Desktop/Caelith/Far Retreat/Intro.txt",
 		"/C/Users/Jason/Documents/GitHub/2048/controllers/board.js",
-		"/C/Users/Jason/Documents/GitHub/2048/resources/2048.css",
 		"/C/Users/Jason/Documents/GitHub/2048/index.html",
 		"/E/globdata.ini",
 		"/E/install.ini",
@@ -251,6 +251,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"GetLeft",
 			"font",
 			"font-size:",
 			"CanMove",
@@ -327,65 +328,67 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/2048.css",
+					"file": "controllers/board.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2774,
+						"buffer_size": 5821,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1453,
-								1453
+								2066,
+								2066
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 765.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "controllers/cell.js",
+					"file": "controllers/tile.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 168,
+						"buffer_size": 7466,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								146,
-								146
+								5090,
+								5090
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1575.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
